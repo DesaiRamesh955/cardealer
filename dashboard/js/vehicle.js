@@ -173,15 +173,16 @@ $(document).ready(function () {
         processData: false,
         contentType: false,
         success: function (response) {
-          
+            console.log(response)
           let result = JSON.parse(response);
-          console.log(result.type);
           if (result.res == "SUCCESS") {
             if (result.type == "UPDATED") {
               $(".message").html(
                 alertView("success", "Vehicle updated succesfully")
               );
               updateVehicle();
+             
+            }else{
               $(".message").html(
                 alertView("success", "Vehicle addedd succesfully")
               );

@@ -183,8 +183,8 @@ if(isset($_POST['update_vehicle'])){
  //get vehicle detail
 
 if(isset($_POST['getvehicle'])){
-    
-    $vehicle = $d->select('vehicles');
+    $user = $_SESSION['uid'];
+    $vehicle = $d->select('vehicles',"user=$user");
 
     if($vehicle){
         echo json_encode(["status"=>"SUCCESS","data"=>$vehicle]);
@@ -253,4 +253,15 @@ if(isset($_POST['signleImageDelete']) && !empty($_POST['signleImageDelete'])){
 
   
 }
+
+if(isset($_POST['getAllData'])){
+    $user = $_SESSION['uid'];
+
+    $vehicles = $d->countRow('vehicles','*',"user=$user");
+    $inquiry = $d->countRow('inquiry','*',"uid=$user");
+
+    echo json_encode(["vehicles"=>$vehicles,"inquiry"=>$inquiry]);
+}
+
+
  ?>

@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
   $(".hamburger").on("click", function () {
     $(this).stop().toggleClass("change");
     $("#sidebar").stop().toggleClass("active");
@@ -59,4 +60,10 @@ function alertView(type, msg) {
 				<span aria-hidden="true">&times;</span>
 			</button>
 			</div>`;
+}
+
+function getPara(key){
+  var url = window.location
+  let searchParams = new URLSearchParams(url.search);
+  return searchParams.get(key);
 }

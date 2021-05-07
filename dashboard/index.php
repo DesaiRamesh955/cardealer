@@ -23,14 +23,16 @@
         <nav id="sidebar">
 
             <ul>
-                <li><a href="index.php?page=home"><i class="fa fa-tachometer" aria-hidden="true"></i>
+                <li><a href="index.php"><i class="fa fa-tachometer" aria-hidden="true"></i>
                         Dashboard</a></li>
+                        <li><a href="../index.php"><i class="fa fa-home" aria-hidden="true"></i>
+                        Home</a></li>
                 <li><a href="index.php?page=vehicles"><i class="fa fa-car" aria-hidden="true"></i>
  Vehicles</a></li>
                 <li><a href="index.php?page=inquiry"> <i class="fa fa-info-circle" aria-hidden="true"></i> Inquiry</a></li>
                 <li><a href="index.php?page=profile"><i class="fa fa-user" aria-hidden="true"></i>
  Profile</a></li>
-                <li><a href=""><i class="fa fa-sign-out" aria-hidden="true"></i>
+                <li><a href="../signout.php"><i class="fa fa-sign-out" aria-hidden="true"></i>
  logout</a></li>
             </ul>
         </nav>
@@ -60,13 +62,14 @@
 
 
 
-    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Popper.JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
     <!-- Bootstrap JS -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
     <script src="../js/validation.js"></script>
+    <script src="js/dashboard.js"></script>
     
 </body>
 

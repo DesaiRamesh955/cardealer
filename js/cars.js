@@ -18,7 +18,7 @@ $(document).ready(function () {
                     <div class="col-lg-4">
                      <div class="trainer-item">
                          <div class="image-thumb">
-                             <a href="#" data-car="${value.vid}" class="view_car"><img src="dashboard/images/${value.feature_image}" alt="" class="car-image"></a>
+                             <a href="javascript:void()" data-car="${value.vid}" class="view_car"><img src="dashboard/images/${value.feature_image}" alt="" class="car-image"></a>
                          </div>
                          <div class="down-content">
                              <span>
@@ -26,7 +26,7 @@ $(document).ready(function () {
                              </span>
  
                             
-                             <a href="#" data-car="${value.vid}" class="view_car"> <h4>${value.title} </h4></a>
+                             <a href="javascript:void()" data-car="${value.vid}" class="view_car"> <h4>${value.title} </h4></a>
                              <ul class="social-icons">
                                 <li></li>
                             </ul>
@@ -115,11 +115,11 @@ $(document).ready(function () {
 
   //view single car
 
-  // $("body").delegate(".view_car", "click", function (e) {
-  //   e.preventDefault();
-  //   const carID = $(this).data("car");
+  $("body").delegate(".view_car", "click", function (e) {
+    e.preventDefault();
+    const carID = $(this).data("car");
 
-  //   localStorage.setItem("carid", carID);
-  //   window.location.href = "car-details.php";
-  // });
+    localStorage.setItem("carid", carID);
+    window.location.href = "car-details.php";
+  });
 });

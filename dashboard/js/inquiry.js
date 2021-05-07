@@ -22,7 +22,7 @@ $(document).ready(function () {
                                   <td>${value.description}</td>
                                   <td>${value.insert_date}</td>
                                   <td>
-                                      <a href="#" data-check="${value.id}" class="btn btn-primary btn-sm inquiryCheck"><i class="fa fa-check" aria-hidden="true"></i></a>
+                                     
                                       <a href="#" data-delete="${value.id}" class="btn btn-danger btn-sm inquiryDelete"><i class="fa fa-pencil" aria-hidden="true"></i></a>
                                   </td>
                               </tr>
